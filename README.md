@@ -1,2 +1,7 @@
-# My Portfolio
- * [x] Under Construction. 🦆
+# 🍋 My Portfolio
+## Created using: 
+* HTML
+* CSS
+* ReactJS
+
+### Currently Under Construction. 🦆
