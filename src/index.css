@@ -1,13 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Reset CSS */
+*{
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Main Styles */
 body {
+  line-height: 1;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.canvas{
+  height: 90vh;
+}
+
+.canvas h1 {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 10rem;
+}
+
+/* Navbar */
+nav{
+  height: 65px;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #252525;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Navbar ul */
+.d-row{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+/* Navbar anchor link  */
+.nav-link {
+  display:block;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-right: -0.4rem;
+  color: white;
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
+ul.d-row li{
+  display: inline-block;
+  position: relative;
+  margin-right: 15px;
+  padding: 5px 15px;
+}
+
+/* hovered on anchor */
+ul.d-row li:hover .nav-link {
+  background-color: #c2eaba;
+  background: linear-gradient(319deg, #c2eaba 0%, #c5f4e0 37%, #efc2cf 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+ul.d-row li:after{
+  content: '';
+	display: block;
+	margin: 10px auto;
+	height: 2px;
+	width: 0px;
+  border-radius: 10px;
+	background: transparent;
+	transition: width .5s ease, background-color 
+}
+
+ul.d-row li:hover:after{
+  width: 100%;
+  background-color: #c2eaba;
+  background-image: linear-gradient(319deg, #c2eaba 0%, #c5f4e0 37%, #efc2cf 100%);
 }

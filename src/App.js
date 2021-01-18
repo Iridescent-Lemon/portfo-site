@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <main>
+      <main className="canvas">
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
